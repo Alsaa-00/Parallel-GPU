@@ -104,18 +104,19 @@ The implementations verify the result by printing `C[0][0] = 4000.00`.
 
 ### Overall execution flow
 
-```mermaid
 flowchart TD
     A[Verify Environment] --> B[Experiment 1: Sequential CPU]
     B --> C[Experiment 2: OpenMP Threads]
-    C --> D[Experiment 3: MPI Virtual-Machine Cluster]
+    C --> D[Experiment 3: MPI Virtual Machine Cluster]
     D --> E[Experiment 4: CUDA GPU]
-    E --> F[Verify Output: C[0][0] = 4000.00]
-    F --> G[Compare Time and Speedup]
-```
-
----
-
+    E --> F["Verify Output: C of 0,0 equals 4000.00"]
+    F --> G[Compare Execution Time and Speedup]flowchart TD
+    A[Verify Environment] --> B[Experiment 1: Sequential CPU]
+    B --> C[Experiment 2: OpenMP Threads]
+    C --> D[Experiment 3: MPI Virtual Machine Cluster]
+    D --> E[Experiment 4: CUDA GPU]
+    E --> F["Verify Output: C of 0,0 equals 4000.00"]
+    F --> G[Compare Execution Time and Speedup]
 ## 6. Experiment 1 — Sequential Matrix Multiplication
 
 ### Aim
